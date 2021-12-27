@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -7,9 +7,8 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 
 dotenv.config();
-console.log(process.env.MONGO_URL);
+
 mongoose.connect(
-    console.log("lalalala hi"),
     process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true },
     () => {
